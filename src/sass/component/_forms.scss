@@ -1,0 +1,121 @@
+.form-search{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	color: #a9a9a9;
+	.form-control{
+		border: 5px solid #e7e7e7;
+		@include prefixer(border-radius , 5px, webkit moz o ms);
+		color: #a9a9a9;
+		padding: 0 60px 0 10px;
+		width: 100%;
+		height: 58px;
+		font-size: 16px;
+	}
+	.custom-select{
+		width: 150px;
+	    height: 25px;
+	    line-height: 20px;
+	    margin: 0;
+	    border: 0;
+	    border-radius: 0;
+	    position: absolute;
+	    top: 17px;
+	    left: 5px;
+	    padding: 0 20px;
+	    color: #000;
+	    font-weight: 400;
+	    font-size: 14px;
+	    border-right: 1px solid #a1a1a1;
+	}
+}
+.contact-form{		
+	input.form-control{
+		border-radius: 5	px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		padding-left: 20px;
+		background-color: transparent;
+		border-color: #c3c3c3;
+		color: #000 !important;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+		&:focus{
+			border-color:none;
+			outline: 0;
+			background-color: transparent !important;
+		}
+	}
+	textarea{
+		width: 100%;
+		height: 100%;
+		border-radius: 7px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		padding-left: 20px;
+		background-color: transparent;
+		border-color: #c3c3c3;
+		color: white !important;	
+		&:focus{
+			border-color:none;
+			outline: 0;
+			background-color: transparent !important;
+		}
+	}
+	
+}
+
+::placeholder {
+  color: #ddd ! important;
+  font-size: .9em;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black ! important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: black ! important;
+}
+input,textarea,select{
+	border-radius: 0;
+	&:focus{
+		border-color:none !important;
+		outline: 0 !important;
+	}
+}
+textarea{
+	&:focus{
+		border-color:none !important;
+		outline: 0 !important;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+	.form-search{
+		.form-control{
+			padding: 0 60px 0 165px;
+		}
+	}
+	.contact-form{
+		.form-row{
+			textarea{
+				margin-top: 0;
+			}
+		}
+	}		
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) { 
+}
+
+/* extra Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-xl-min) { 
+}

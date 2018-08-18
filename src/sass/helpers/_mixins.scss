@@ -1,0 +1,116 @@
+/**
+** overlay mixin
+** Example : @include overlay(red,.5);
+**/
+@mixin overlay($color, $opacity) {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color, $opacity);
+}
+
+/**
+** prefixes mixin
+** Example: @include prefixer(property name , value , prefixes);
+			@include prefixer(box-shadow , 10px 10px 10px #ccc, webkit moz o ms);
+**/
+@mixin prefixer($prop , $val , $prefixes: ()){
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $prop}: $val;
+	}
+	#{$prop}: $val;
+}
+
+/**
+** animation mixin
+** Example: @include keyframes(fadein){
+				0%{
+					opacity:.5;
+				}
+				50%{
+					opacity:1;
+				}
+				100%{
+					opacity:.5;
+				}
+		   	}
+**/
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+    	@content;
+	}
+	@-moz-keyframes #{$name} {
+    	@content;
+	}
+	@-o-keyframes #{$name} {
+    	@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+/*
+** Links mixin
+** Example: @include linx(white, blue, green, red);
+*/
+@mixin linx ($link, $visit, $hover, $active) {
+	a {
+    	color: $link;
+	    &:visited {
+	      color: $visit;
+	    }
+	    &:hover {
+	      color: $hover;   
+	    }
+	    &:active {
+	      color: $active;
+	    }
+	}
+}
+
+/*
+** Padding mixin
+** Example: @include pad(20px);
+ 	 		@include pad(10px 20px);
+			@include pad(10px 20px 40px);
+			@include pad(10px 20px 30px 20px);
+*/
+@mixin pad ($pads...) {
+	padding: $pads;
+}
+
+/*
+** Center Element mixin
+** Example: @include center();
+*/
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefixer(transform, translate(-50%, -50%), webkit moz o);
+}
+
+/*
+** Opacity Mixin For All Browsers
+** Example: @include opacity(.5);
+*/
+@mixin opacity($value) {
+   zoom: 1;
+   $opacity-ie: $value * 100;
+   filter: alpha(opacity = $opacity-ie);
+   opacity: $value;
+}
+
+/*
+** Transition Mixin For All Browsers
+** Example: @include transition(all .5s ease);
+*/
+@mixin transition($arg...) {
+   -webkit-transition: $arg;
+   -moz-transition: $arg;
+   -o-transition: $arg;
+   transition: $arg;
+}

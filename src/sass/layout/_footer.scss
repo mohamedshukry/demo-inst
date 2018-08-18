@@ -1,0 +1,114 @@
+footer{
+	padding: 40px 0 0 0;
+	background-color: rgba( #000 , .7);
+	.footer-content{
+		background: url(../../dest/img/fBg.png);
+		color: #fff;
+		padding: 3	0px 0 20px 0;
+		position: relative;
+		.text{
+			font-size: 14px;
+			color: #fff;
+		}
+		.logo{
+			img{
+				width: 70%;
+				height: 100px;
+			}
+		}
+		.footer-tittel{
+			color: white;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+		}
+		.address-list{
+			li{
+				position: relative;
+			    line-height: 22px;
+			    padding: 0 0 0 56px;
+			    margin: 15px 0;
+			    i{
+				    height: 30px;
+				    width: 30px;
+				    line-height: 26px;
+				    color: #fff;
+				    border: 2px solid #d5d5d5;
+				    text-align: center;
+				    border-radius: 100%;
+				    font-size: 17px;
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+
+				}
+				.info-box{
+					border-bottom: 1px solid rgba(255,255,255,0.08);
+					padding: 0 0 20px;
+					.template-a{
+						font-size: 13px;
+						color: #fff;
+						&:hover{
+							color:white;
+						}
+					}
+				}
+				&:last-child > .info-box{
+					border-bottom: 0;
+				}
+			}
+		}
+		.quick-links{
+			li{
+				margin-bottom: 15px;
+				a{
+					position: relative;
+					padding-left:20px;
+					overflow: hidden;
+					-webkit-transition: .5s all;
+					-moz-transition: .5s all;
+					-o-transition: .5s all;
+					-ms-transition: .5s all;
+					transition: .5s all;
+					color: #fff;
+					&:before{
+					    content: "\eb44";
+					    position: absolute;
+					    transform: rotate(-90deg);
+					    left: 0;
+					    font-family: icofont;
+					    top: 0;
+					}
+					&:hover{
+						padding-left: 27px;
+						color: white;
+					}
+				}
+			}
+		}
+		.media{
+			margin-bottom: 20px;
+			img{
+				width: 40px;
+			}
+			.media-body{
+				font-size: 14px;
+				.date{
+					color: white;
+				}
+			}
+		}
+	}
+	.main-footer{
+		padding: 20px;
+		border-top: 1px solid #636c72;
+		.copyright{
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			.we{
+				text-transform: uppercase;
+				color: $primary-color;
+			}
+		}
+	}
+}

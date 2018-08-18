@@ -1,0 +1,6 @@
+a{
+	@include transition(all .5s ease);
+	&:hover{
+		text-decoration: none;
+	}
+}

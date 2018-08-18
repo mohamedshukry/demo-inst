@@ -1,0 +1,32 @@
+.slider-area{
+    margin-bottom: 0px;
+    .item{
+        margin-bottom: 0;
+        .content-img{
+            height:250px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .slick-dots{
+        display: none;
+        bottom: 10px;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+    .slider-area{
+        height: 100%;
+        .item{
+            .content-img{
+                height:100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }    
+        }
+    }
+}

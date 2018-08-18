@@ -1,0 +1,31 @@
+/*Fonts*/
+$font-family: 			'Eczar', serif;
+$title-family: 			'Signika Negative', sans-serif;
+$body-font-size:		14px;
+$body-line-height:		20px;
+$p-font:				'Lora', serif;
+
+/*Colors*/
+$primary-color:		rgb(237, 0, 111);
+$secondary-color:	rgb(102, 0, 200);
+$title-color:		#364253;
+$top-bar-bg:		#e9edd7;
+
+/*Social Colors*/
+$facebook:	#3B5998;
+$twitter:	#1DA1F2;
+$linkedin:	#0E76A8;
+$instgram:	#3F729B;
+$youtube:	#C4302B;
+$gplus:		#DD4B39;
+$dribbble:	#ea4c89;
+
+/*Screens*/
+$screen-ex-min: 576px;
+$screen-sm-min: 768px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Eczar|Signika+Negative:700');
